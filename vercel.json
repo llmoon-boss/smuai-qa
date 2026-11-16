@@ -4,6 +4,7 @@
     "SMU_DB_ENGINE": "sqlite",
     "SMU_DB_PATH": "/tmp/smu_ai.db",
     "SMU_COOKIE_SECURE": "1",
-    "SMU_RATE_PER_MIN": "20"
+    "SMU_RATE_PER_MIN": "20",
+    "SMU_DB_AUTO_INIT": "1"
   }
 }
