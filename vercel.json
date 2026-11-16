@@ -1,14 +1,22 @@
 {
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "app.py": {
+      "maxDuration": 60,
+      "memory": 1024,
+      "includeFiles": "{templates,static}/**"
+    }
+  },
+  "rewrites": [
     {
-      "src": "app.py",
-      "use": "@vercel/python"
+      "source": "/(.*)",
+      "destination": "/app.py"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ]
+  "env": {
+    "SMU_DB_ENGINE": "sqlite",
+    "SMU_DB_PATH": "/tmp/smu_ai.db",
+    "SMU_COOKIE_SECURE": "1",
+    "SMU_RATE_PER_MIN": "20"
+  }
 }
