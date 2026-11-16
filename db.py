@@ -473,3 +473,11 @@ SEED_QA = [
      '贷款学生毕业离校前，应先与经办银行办理还款确认手续；拒不办理还款确认手续或提供虚假信息的，二级学院将暂缓为其办理离校手续，贷款银行有权要求其提前偿还所有贷款本息。',
      '毕业,还款确认,离校,贷款', '奖助'),
 ]
+
+# ---------- 云端自动建表（Vercel 的 Flask 预设把 app.py 当模块导入，不会执行
+# `python app.py` 的 __main__ 分支，因此在这里补一次初始化） ----------
+if os.getenv("SMU_DB_AUTO_INIT") == "1" and DB_ENGINE == "sqlite":
+    try:
+        init_db()
+    except Exception as exc:
+        print("[db] auto-init failed:", exc)
