@@ -1,13 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "api/index.py": {
-      "includeFiles": "**",
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  },
-  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }],
   "env": {
     "SMU_DB_ENGINE": "sqlite",
     "SMU_DB_PATH": "/tmp/smu_ai.db",
