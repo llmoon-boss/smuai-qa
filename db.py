@@ -483,3 +483,5 @@ if os.getenv("SMU_DB_AUTO_INIT") == "1" and DB_ENGINE == "sqlite":
         print("[db] auto-init failed:", exc)
 
 # deploy trigger 2026-11-17
+
+# deploy trigger 2 2026-11-17
