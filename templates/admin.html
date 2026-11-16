@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识库管理 · 校园智能问答</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <!-- 登录视图 -->
+  <div id="login-view" class="login-card">
+    <h1>知识库管理</h1>
+    <input id="login-username" type="text" placeholder="用户名">
+    <input id="login-password" type="password" placeholder="密码">
+    <button id="login-btn">登 录</button>
+  </div>
+  <!-- 管理面板 -->
+  <div id="panel-view" class="admin-wrap hidden">
+    <header class="chat-header">
+      <h1>知识库管理</h1>
+      <div>
+        <a class="admin-link" href="/">返回问答</a>
+        <button id="logout-btn" class="admin-link">退出登录</button>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="qa">知识库管理</button>
+      <button class="tab" data-tab="logs">聊天记录</button>
+      <button class="tab" data-tab="feedbacks">用户反馈</button>
+    </div>
+
+    <!-- 知识库管理 -->
+    <div id="tab-qa">
+      <form id="qa-form" class="qa-form">
+        <input id="f-question" type="text" placeholder="问题（如：图书馆几点开门？）" required>
+        <textarea id="f-answer" placeholder="标准答案" rows="3" required></textarea>
+        <div class="form-row">
+          <input id="f-keywords" type="text" placeholder="关键词，逗号分隔（如：图书馆,开门,时间）">
+          <input id="f-category" type="text" placeholder="分类（如：图书馆）">
+        </div>
+        <div class="form-row">
+          <button type="submit" id="qa-submit-btn">新增问答</button>
+          <button type="button" id="qa-cancel-btn" class="hidden">取消编辑</button>
+        </div>
+      </form>
+
+      <div class="toolbar">
+        <input id="kw-input" type="text" placeholder="搜索问题或关键词">
+        <button id="kw-search-btn">搜索</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="qa-table">
+          <thead>
+            <tr><th>ID</th><th>问题</th><th>答案</th><th>关键词</th><th>分类</th><th>操作</th></tr>
+          </thead>
+          <tbody id="qa-tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="pager">
+        <button id="prev-btn">上一页</button>
+        <span id="page-info"></span>
+        <button id="next-btn">下一页</button>
+      </div>
+    </div>
+
+    <!-- 聊天记录 -->
+    <div id="tab-logs" class="hidden">
+      <div class="table-wrap">
+        <table class="qa-table">
+          <thead>
+            <tr><th>ID</th><th>用户问题</th><th>来源</th><th>回答</th><th>时间</th></tr>
+          </thead>
+          <tbody id="logs-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 用户反馈 -->
+    <div id="tab-feedbacks" class="hidden">
+      <div class="table-wrap">
+        <table class="qa-table">
+          <thead>
+            <tr><th>ID</th><th>昵称/姓名</th><th>用户名</th><th>反馈内容</th><th>状态</th><th>时间</th><th>操作</th></tr>
+          </thead>
+          <tbody id="feedbacks-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/admin.js"></script>
+</body>
+</html>
