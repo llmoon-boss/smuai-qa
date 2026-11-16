@@ -1,0 +1,6 @@
+# 采集/评测/演示站额外依赖（crawl_*.py、kbsearch.py、demo_web.py 需要）
+-r requirements.txt
+jieba>=0.42
+rank_bm25>=0.2
+numpy>=1.26
+python-docx>=1.1

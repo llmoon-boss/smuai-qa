@@ -1,0 +1,26 @@
+# Render Blueprint：在 Render 控制台 New → Blueprint 选中本仓库即可一键创建
+services:
+  - type: web
+    name: smuai-qa
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 1 -k gthread --threads 4 -b 0.0.0.0:$PORT wsgi:app --timeout 120
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+      - key: SMU_DB_ENGINE
+        value: sqlite
+      - key: SMU_DB_PATH
+        value: /tmp/smu_ai.db
+      - key: SMU_SECRET_KEY
+        generateValue: true
+      - key: SMU_LLM_API_KEY
+        sync: false
+      - key: SMU_ADMIN_PASSWORD
+        sync: false
+      - key: SMU_COOKIE_SECURE
+        value: "1"
+      - key: SMU_RATE_PER_MIN
+        value: "20"

@@ -1,0 +1,19 @@
+--- PARA 3 style=Normal (Web) align=JUSTIFY (3) ---
+  run underline=None text=''
+  run underline=None text='学生姓名'
+  run underline=None text='：'
+  run underline=None text='          学号：'
+--- PARA 4 style=Normal (Web) align=JUSTIFY (3) ---
+  run underline=None text='学   院：'
+--- PARA 5 style=Normal (Web) align=JUSTIFY (3) ---
+  run underline=None text='专'
+  run underline=None text='  '
+  run underline=None text=' '
+  run underline=None text='  '
+  run underline=None text=' 业：'
+--- PARA 6 style=Normal (Web) align=JUSTIFY (3) ---
+  run underline=None text='论文（设计）题目 ：'
+--- PARA 8 style=Normal (Web) align=JUSTIFY (3) ---
+  run underline=None text='指导教师：'
+--- PARA 16 style=Normal (Web) align=CENTER (1) ---
+  run underline=None text='年     月     日'

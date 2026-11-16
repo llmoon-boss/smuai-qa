@@ -1,0 +1,31 @@
+===== ROW 0 (6 cells) =====
+  tc gridSpan=1 vMerge=merge paras=1 first=['学   院']
+  tc gridSpan=1 vMerge=merge paras=1 first=['专业（方向）']
+  tc gridSpan=1 vMerge=merge paras=1 first=['学生姓名']
+  tc gridSpan=1 vMerge=merge paras=1 first=['学号']
+  tc gridSpan=1 vMerge=merge paras=1 first=['指导教师']
+  tc gridSpan=1 vMerge=merge paras=1 first=['职称/学位']
+===== ROW 1 (6 cells) =====
+  tc gridSpan=1 vMerge=merge paras=1 first=['']
+  tc gridSpan=1 vMerge=merge paras=1 first=['']
+  tc gridSpan=1 vMerge=merge paras=1 first=['']
+  tc gridSpan=1 vMerge=merge paras=1 first=['']
+  tc gridSpan=1 vMerge=merge paras=1 first=['']
+  tc gridSpan=1 vMerge=merge paras=1 first=['']
+===== ROW 2 (6 cells) =====
+  tc gridSpan=1 vMerge=merge paras=1 first=['题   目']
+  tc gridSpan=5 vMerge=merge paras=1 first=['']
+===== ROW 3 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=4 first=['一、选题的背景与意义，与本课题相关的国内外研究状况', '']
+===== ROW 4 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=4 first=['二、研究的主要内容和预期目标', '']
+===== ROW 5 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=4 first=['三、主要研究方法', '']
+===== ROW 6 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=4 first=['四、研究进度安排', '']
+===== ROW 7 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=4 first=['五、主要参考文献', '']
+===== ROW 8 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=6 first=['六、指导教师意见', '']
+===== ROW 9 (6 cells) =====
+  tc gridSpan=6 vMerge=merge paras=5 first=['七、学院毕业论文（设计）工作委员会意见', '']

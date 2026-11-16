@@ -1,0 +1,8 @@
+# 线上/核心依赖（Render 只需这些）
+flask>=3.0
+requests>=2.31
+gunicorn>=21.2
+waitress>=3.0
+# 本地 MySQL 才用到；用 SQLite 时可删
+pymysql>=1.1
+cryptography>=42.0

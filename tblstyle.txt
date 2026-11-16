@@ -1,0 +1,12 @@
+table0 style=Table Grid rows=6 cols=3
+  hdr run font=Times New Roman size=133350 bold=True
+table1 style=Table Grid rows=11 cols=4
+  hdr run font=Times New Roman size=133350 bold=True
+table2 style=Table Grid rows=5 cols=3
+  hdr run font=Times New Roman size=133350 bold=True
+table3 style=Table Grid rows=7 cols=2
+  hdr run font=Times New Roman size=133350 bold=True
+table4 style=Table Grid rows=6 cols=3
+  hdr run font=Times New Roman size=133350 bold=True
+table5 style=Table Grid rows=9 cols=3
+  hdr run font=Times New Roman size=133350 bold=True

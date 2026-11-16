@@ -1,0 +1,61 @@
+#0 <p> style=Normal text=基于混合检索增强生成的校园智能问答系统设计与实现
+#1 <p> style=Normal text=项目设计报告
+#2 <p> style=Heading 1 text=1 项目开发背景及可行性分析
+#3 <p> style=Heading 2 text=1.1 开发背景
+#4 <p> style=Normal text=高校校园事务信息分散于教务处、图书馆、学工、后勤等多个二级单位，学生查询政策与办
+#5 <p> style=Heading 2 text=1.2 可行性分析
+#6 <tbl>
+#7 <p> style=Normal text=
+#8 <p> style=Heading 1 text=2 需求分析
+#9 <p> style=Heading 2 text=2.1 用户角色
+#10 <p> style=Normal text=系统面向三类角色：游客可提问；普通用户增加注册登录与意见反馈；管理员负责知识库、
+#11 <p> style=Heading 2 text=2.2 功能需求
+#12 <tbl>
+#13 <p> style=Normal text=
+#14 <p> style=Heading 2 text=2.3 非功能需求
+#15 <tbl>
+#16 <p> style=Normal text=
+#17 <p> style=Heading 2 text=2.4 主要业务规则
+#18 <p> style=Normal text=（1）问答流程：查询改写 → 混合检索 → 重排 → 置信度判断 → 生成（带引
+#19 <p> style=Normal text=（2）拒答规则：重排最高分低于阈值或检索结果为空时，返回“未找到相关依据”，不强
+#20 <p> style=Normal text=（3）知识规则：答案保留文件原文要点、规则冲突以最新文件为准、无法核实不收录；大
+#21 <p> style=Heading 1 text=3 概要设计
+#22 <p> style=Heading 2 text=3.1 总体架构
+#23 <p> style=Normal text=系统采用四层结构：表现层（用户问答页、管理后台）→ 接口层（Flask REST
+#24 <p> style=Normal text=问答引擎流水线：查询改写 → BM25 与向量并行检索 → RRF 融合 → 重
+#25 <p> style=Heading 2 text=3.2 模块划分
+#26 <tbl>
+#27 <p> style=Normal text=
+#28 <p> style=Heading 2 text=3.3 核心流程
+#29 <p> style=Normal text=问答流程：（1）提交问题与会话号；（2）结合历史改写查询；（3）混合检索取 To
+#30 <p> style=Normal text=文档入库流程：（1）上传并校验；（2）解析文本（docx 段落还原/pdf 提取
+#31 <p> style=Heading 2 text=3.4 数据库概要设计
+#32 <p> style=Normal text=沿用学年设计 5 张表（qa_pairs、chat_logs、admin、use
+#33 <tbl>
+#34 <p> style=Normal text=
+#35 <p> style=Normal text=关系：documents 与 chunks 一对多；conversations 
+#36 <p> style=Heading 2 text=3.5 接口概要设计
+#37 <tbl>
+#38 <p> style=Normal text=
+#39 <p> style=Normal text=沿用学年设计全部旧接口；旧 POST /api/chat 保持兼容。
+#40 <p> style=Heading 1 text=4 详细设计
+#41 <p> style=Heading 2 text=4.1 混合检索算法
+#42 <p> style=Normal text=（1）BM25 稀疏检索（jieba 分词，k1=1.5，b=0.75）：
+#43 <p> style=Normal text=（2）稠密检索：查询与切块向量的余弦相似度 sim(q,v) = q·v / (
+#44 <p> style=Normal text=（3）RRF 融合：RRF(d) = Σ 1 / (k + rank(d))，k
+#45 <p> style=Normal text=（4）重排：bge-reranker-base 对融合结果精排取 Top-5；最
+#46 <p> style=Heading 2 text=4.2 生成与引用
+#47 <p> style=Normal text=（1）提示词约束：只依据检索片段作答、引用处标注 [n]、未涉及内容不编造、政策
+#48 <p> style=Normal text=（2）输出校验：越界引用编号剔除，返回引用清单（编号、文件名、章节）供前端溯源展
+#49 <p> style=Normal text=（3）降级策略：大模型不可用时返回知识库 Top-1 内容并提示；无密钥时返回模
+#50 <p> style=Heading 2 text=4.3 文档切块与入库
+#51 <p> style=Normal text=（1）解析：docx 段落还原、pdf 文本提取、图片用 RapidOCR 识别
+#52 <p> style=Normal text=（2）切块：按标题层级分段后滑窗切块，块长 400 字、重叠 80 字，保留来源
+#53 <p> style=Normal text=（3）向量化：bge-small-zh-v1.5（512 维）编码后写入 Chr
+#54 <p> style=Heading 2 text=4.4 多轮会话
+#55 <p> style=Normal text=会话携带最近 3 轮历史；检索前对问题做指代消解与省略补全（如“那补考呢”补全为
+#56 <p> style=Heading 2 text=4.5 异常处理与安全
+#57 <p> style=Normal text=（1）三级降级：向量库异常 → 仅 BM25；大模型异常 → 知识库摘要；无密钥
+#58 <p> style=Normal text=（2）写日志失败不影响问答响应；启动建表与种子写入幂等；
+#59 <p> style=Normal text=（3）安全：密码哈希、SQL 参数化、会话隔离；上传文件类型白名单、大小限 10
+#60 <sectPr>

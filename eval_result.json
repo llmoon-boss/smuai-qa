@@ -1,0 +1,183 @@
+[
+ {
+  "q": "重修怎么申请",
+  "gold": [
+   "重修"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 3
+ },
+ {
+  "q": "辅修专业怎么报名",
+  "gold": [
+   "辅修"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 2
+ },
+ {
+  "q": "学业预警是怎么处理的",
+  "gold": [
+   "学业预警"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 7
+ },
+ {
+  "q": "教室可以借用吗",
+  "gold": [
+   "教室"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 2
+ },
+ {
+  "q": "教学档案怎么归档",
+  "gold": [
+   "教学档案"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 2
+ },
+ {
+  "q": "双语教学课程怎么开",
+  "gold": [
+   "双语教学"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 1
+ },
+ {
+  "q": "教学信息员做什么",
+  "gold": [
+   "教学信息员"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 7
+ },
+ {
+  "q": "应征入伍学籍怎么保留",
+  "gold": [
+   "应征入伍"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 1
+ },
+ {
+  "q": "新生入学资格复查",
+  "gold": [
+   "入学资格复查"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 1
+ },
+ {
+  "q": "学位论文作假怎么处理",
+  "gold": [
+   "学位论文作假"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 1
+ },
+ {
+  "q": "考研有什么奖励",
+  "gold": [
+   "考研"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 6
+ },
+ {
+  "q": "教学成果奖怎么评",
+  "gold": [
+   "教学成果奖"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 3
+ },
+ {
+  "q": "教改项目怎么申报",
+  "gold": [
+   "教育教学改革研究项目"
+  ],
+  "chunkRank": 1,
+  "hybridRank": null,
+  "nGoldInCorpus": 1
+ },
+ {
+  "q": "通识教育选修课要修多少学分",
+  "gold": [
+   "通识教育选修课"
+  ],
+  "chunkRank": 2,
+  "hybridRank": 1,
+  "nGoldInCorpus": 25
+ },
+ {
+  "q": "调课停课怎么办手续",
+  "gold": [
+   "课程运行管理"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 4,
+  "nGoldInCorpus": 1
+ },
+ {
+  "q": "实验室安全怎么管理",
+  "gold": [
+   "实验室"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 31
+ },
+ {
+  "q": "毕业论文抽检怎么安排",
+  "gold": [
+   "毕业论文"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 8
+ },
+ {
+  "q": "补考怎么报名",
+  "gold": [
+   "补考"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 4
+ },
+ {
+  "q": "实践教育基地怎么建设",
+  "gold": [
+   "实践教育基地"
+  ],
+  "chunkRank": null,
+  "hybridRank": null,
+  "nGoldInCorpus": 0
+ },
+ {
+  "q": "学生评教怎么操作",
+  "gold": [
+   "评教",
+   "教学质量评价"
+  ],
+  "chunkRank": 1,
+  "hybridRank": 1,
+  "nGoldInCorpus": 16
+ }
+]

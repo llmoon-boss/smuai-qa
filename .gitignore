@@ -1,0 +1,25 @@
+# 密钥与本地配置（绝不入库）
+.env
+kb_cookies.json
+
+# 虚拟环境 / 缓存
+.venv/
+.venv1/
+__pycache__/
+*.pyc
+.idea/
+
+# 运行期数据（SQLite 库、日志）
+data/
+*.db
+*.db-wal
+*.db-shm
+kb_crawl_progress.log
+
+# 大体积中间文件（采集语料与截图，回归可复现时再单独上传）
+kb_chunks.json
+kb_corpus.json
+kb_docs.json
+kb_crawl.json
+smudata/
+shots/
